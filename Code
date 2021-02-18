@@ -33,6 +33,16 @@ float heatIndexF;                 // indchill in Fahrenheit
 
 void setup()
 {
-Serial.begin(9600)                //Initialize serial monitor
-dht.begin()                       //start reading the DHT sensor
+Serial.begin(9600);               //Initialize serial monitor
+dht.begin();                      //start reading the DHT sensor
+} 
+
+void loop()
+{
+humidityVal = dht.readhumidity();         //get humidity fron DHT sensor
+tempValC = dht.readTemperature();         // get temerature in Celcius from DHT sensor
+tempValF = dht.readTemperature(true);     // get temerature in Fahrenheit from DHT sensor
+
+// Check if all values are read correctly, if not try again and exit loop()
+if (isnam(humidityVal 
 
