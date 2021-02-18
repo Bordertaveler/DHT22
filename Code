@@ -18,3 +18,21 @@
 #define dhtPin 12  // data pin
 
 /*
+* Uncomment the correct DHT chip
+//#define dhtType DHT11           //DHT 11
+#define dhtType DHT22             //DHT 22 (AM2302), AM2321
+//#define dhtType DHT21           //DHT 21 (AM2301)
+
+DHT dht(dhtPin, dhtType);         //Initialize the DHT Library
+
+float humidityVal;                //humidity
+float tempValC;                   // temperature in Celcius
+float tempValF;                   // temperature in Fahrenheit
+float heatIndexC;                 // windchill in Celcius
+float heatIndexF;                 // indchill in Fahrenheit
+
+void setup()
+{
+Serial.begin(9600)                //Initialize serial monitor
+dht.begin()                       //start reading the DHT sensor
+
