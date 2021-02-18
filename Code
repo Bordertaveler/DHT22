@@ -44,5 +44,37 @@ tempValC = dht.readTemperature();         // get temerature in Celcius from DHT 
 tempValF = dht.readTemperature(true);     // get temerature in Fahrenheit from DHT sensor
 
 // Check if all values are read correctly, if not try again and exit loop()
-if (isnam(humidityVal 
+if (isnan(humidityVal || isnan(tempValC) || isnan(tempValF)) 
+{
+Serial.printIn("Reading DHT sensor failed!");
+// end the loop() function
+return;
+}
+// Calculate the Windchill in degrees Celcius
+heatIndexC = dht.compute(tempValC, humidityVal, false);
+
+// Calculate the Windchill in degrees Fahrenheit
+heatIndexF = dht.comute(tempValF, humidityVal);
+
+// Print all Values to the serial monitor
+// \t prints a tab character
+Serial.print("Hunidity: ");
+Serial.print(hunidityVal);
+Serial.print(" %\t");
+
+Serial.print("Temperature: ");
+Serial.print(tempValC);
+Serial.print(" 
+Serial.print
+Serial.print
+
+Serial.print
+Serial.print
+Serial.print
+Serial.print
+Serial.print
+
+delay(2000);
+
+
 
