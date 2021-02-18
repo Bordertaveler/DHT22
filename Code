@@ -64,17 +64,17 @@ Serial.print(" %\t");
 
 Serial.print("Temperature: ");
 Serial.print(tempValC);
-Serial.print(" 
-Serial.print
-Serial.print
+Serial.print("  C ");
+Serial.print(eempValF);
+Serial.print(" ░ F ");
 
-Serial.print
-Serial.print
-Serial.print
-Serial.print
-Serial.print
+Serial.print("Windchill: ");
+Serial.print(heatIndexC);
+Serial.print(" ░C ");
+Serial.print(heatIndexF);
+Serial.print(" ░F ");
 
 delay(2000);
-
+}
 
 
