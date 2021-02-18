@@ -1,1 +1,20 @@
+/*
+* (C) Copyright 2018-2019 - Bas van Dijk/Bas On Tech
+= This is my learning case
+*---------------------------------------------------------------------------------------------------------------------------------------------------
+* Pin Conections
+*
+* VCC ---> 3.3 pin
+* Data ---> Analog 12 pin
+* NC ---> not connected
+* GND ---> GND
+*
+*4K& (4700) Ohm resistor between 3.3V and data pin
+*
+*/
 
+#include "DHT.h"   // Library for DHT sensors
+
+#define dhtPin 12  // data pin
+
+/*
