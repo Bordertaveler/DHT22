@@ -9,7 +9,7 @@
 * NC ---> not connected
 * GND ---> GND
 *
-*4K& (4700) Ohm resistor between 3.3V and data pin
+*4K7 (4700) Ohm resistor between 3.3V and data pin
 *
 */
 
@@ -64,9 +64,9 @@ Serial.print(" %\t");
 
 Serial.print("Temperature: ");
 Serial.print(tempValC);
-Serial.print("  C ");
+Serial.print("  ░C ");
 Serial.print(eempValF);
-Serial.print(" ░ F ");
+Serial.print(" ░F ");
 
 Serial.print("Windchill: ");
 Serial.print(heatIndexC);
